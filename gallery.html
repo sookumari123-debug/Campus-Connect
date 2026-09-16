@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -237,4 +238,245 @@
 
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery - Campus Connect</title>
+
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            <div class="logo-icon">CC</div>
+
+            <div class="logo-name">
+                <h2>Campus Connect</h2>
+                <span>Smart College Club Portal</span>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="clubs.html">Clubs</a>
+            <a href="events.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Gallery Heading -->
+    <section class="gallery-heading">
+
+        <h1>GEC Kishanganj Gallery</h1>
+
+        <p>
+            Glimpses of our college campus and student activities
+        </p>
+
+    </section>
+
+
+    <!-- Gallery Cards -->
+    <section class="gallery-container">
+
+
+        <!-- Campus -->
+        <div class="gallery-card">
+
+            <div class="photo-box">
+                🏫
+            </div>
+
+            <h2>GEC Kishanganj Campus</h2>
+
+            <p>
+                Glimpses of our college campus and surroundings.
+            </p>
+
+            <button onclick="viewCampusPhotos()">
+                View Photos
+            </button>
+
+        </div>
+
+
+        <!-- Hackathon -->
+        <div class="gallery-card">
+
+            <div class="photo-box">
+                💻
+            </div>
+
+            <h2>Web Development Hackathon</h2>
+
+            <p>
+                Students participating in coding and web development activities.
+            </p>
+
+            <button onclick="viewHackathonPhotos()">
+                View Photos
+            </button>
+
+        </div>
+
+
+        <!-- Art Exhibition -->
+        <div class="gallery-card">
+
+            <div class="photo-box">
+                🎨
+            </div>
+
+            <h2>Art Exhibition 2026</h2>
+
+            <p>
+                Students showcasing paintings, sketches and creative artwork.
+            </p>
+
+            <button onclick="viewArtPhotos()">
+                View Photos
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Photo Popup -->
+    <div id="photoModal" class="photo-modal">
+
+        <span class="close" onclick="closePhoto()">&times;</span>
+
+        <button class="prev-btn" onclick="previousPhoto()">
+            ❮
+        </button>
+
+        <img id="galleryPhoto" src="" alt="Gallery Photo">
+
+        <button class="next-btn" onclick="nextPhoto()">
+            ❯
+        </button>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        const campusPhotos = [
+            "Smart-Campus-1.webp",
+            "government -engineering.jpg",
+            "images (2).jpg",
+            "images (3).jpg",
+            "images (4).jpg",
+        ];
+
+
+        const hackathonPhotos = [
+            "hackathon.jpg",
+            "photo2.jpg",
+            "photo1.jpg",
+            "photo.jpg"
+        ];
+
+
+        const artPhotos = [
+            "art.jpg",
+            "art1.jpg"
+        ];
+
+
+        let currentGallery = [];
+        let galleryIndex = 0;
+
+
+        function openGallery(photos) {
+
+            currentGallery = photos;
+
+            galleryIndex = 0;
+
+            document.getElementById("galleryPhoto").src =
+                currentGallery[galleryIndex];
+
+            document.getElementById("photoModal").style.display = "flex";
+        }
+
+
+        function viewCampusPhotos() {
+
+            openGallery(campusPhotos);
+
+        }
+
+
+        function viewHackathonPhotos() {
+
+            openGallery(hackathonPhotos);
+
+        }
+
+
+        function viewArtPhotos() {
+
+            openGallery(artPhotos);
+
+        }
+
+
+        function nextPhoto() {
+
+            galleryIndex++;
+
+            if (galleryIndex >= currentGallery.length) {
+
+                galleryIndex = 0;
+
+            }
+
+            document.getElementById("galleryPhoto").src =
+                currentGallery[galleryIndex];
+
+        }
+
+
+        function previousPhoto() {
+
+            galleryIndex--;
+
+            if (galleryIndex < 0) {
+
+                galleryIndex = currentGallery.length - 1;
+
+            }
+
+            document.getElementById("galleryPhoto").src =
+                currentGallery[galleryIndex];
+
+        }
+
+
+        function closePhoto() {
+
+            document.getElementById("photoModal").style.display = "none";
+
+        }
+
+    </script>
+
+</body>
+
+>>>>>>> origin/main
 </html>

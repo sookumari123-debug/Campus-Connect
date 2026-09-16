@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Remove default spacing */
 * {
     margin: 0;
@@ -108,3 +109,115 @@ a{
 }
 
 
+=======
+/* Remove default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Header */
+header {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 15px 50px;
+
+    background-color: white;
+}
+
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+
+    width: 330px;
+}
+
+
+/* Round CC Logo */
+.logo-circle {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background-color: #1769e0;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-right: 12px;
+}
+
+
+/* Logo Name */
+.logo-name h2 {
+    color: #174d91;
+    font-size: 24px;
+}
+
+.logo-name p {
+    color: #555;
+    font-size: 14px;
+
+    margin-top: 4px;
+}
+
+
+/* Navigation */
+nav {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+}
+
+
+/* Navigation Links */
+nav a {
+    text-decoration: none;
+
+    color: #174d91;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+body{
+    height: 100vh;
+    background-image: url("Smart-Campus-1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+a{
+    text-decoration: none;
+    color: rgb(87, 83, 83);
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+>>>>>>> origin/main

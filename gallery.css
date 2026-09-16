@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -235,4 +236,243 @@ header {
 
 .next-btn {
     right: 30px;
+=======
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 50px;
+
+    background: white;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    background: #2563eb;
+    color: white;
+
+    padding: 10px;
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.logo-name h2 {
+    margin: 0;
+}
+
+.logo-name span {
+    font-size: 12px;
+}
+
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+}
+
+
+/* Heading */
+
+.gallery-heading {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.gallery-heading h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.gallery-heading p {
+    color: #555;
+}
+
+
+/* Gallery Card */
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.gallery-card {
+    width: 350px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+.photo-box {
+    height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #e8eef7;
+
+    font-size: 60px;
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+}
+
+
+.gallery-card h2 {
+    margin-bottom: 10px;
+}
+
+
+.gallery-card p {
+    color: #555;
+
+    margin-bottom: 20px;
+}
+
+
+/* Button */
+
+.gallery-card button {
+    padding: 10px 20px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.gallery-card button:hover {
+    background: #1d4ed8;
+}
+
+
+/* Photo Popup */
+
+.photo-modal {
+    display: none;
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+
+/* Big Photo */
+
+.photo-modal img {
+    max-width: 75%;
+    max-height: 80%;
+
+    border-radius: 10px;
+}
+
+
+/* Close Button */
+
+.close {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    color: white;
+
+    font-size: 40px;
+
+    cursor: pointer;
+}
+
+
+/* Previous and Next */
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+}
+
+
+.prev-btn {
+    left: 30px;
+}
+
+
+.next-btn {
+    right: 30px;
+>>>>>>> origin/main
 }
