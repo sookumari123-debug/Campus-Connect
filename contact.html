@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - Campus Connect</title>
+
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            <div class="logo-icon">CC</div>
+
+            <div class="logo-name">
+                <h2>Campus Connect</h2>
+                <span>Smart College Club Portal</span>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="clubs.html">Clubs</a>
+            <a href="events.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Contact Heading -->
+    <section class="contact-heading">
+
+        <h1>Contact Us</h1>
+
+        <p>Have a question? Send us a message.</p>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact-container">
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+
+            <h2>📍 GEC Kishanganj</h2>
+
+            <p>
+                Government Engineering College,
+                Mahesh Bathna, Kishanganj, Bihar - 855107
+            </p>
+
+            <p>📧 Email: info@geckishanganj.org</p>
+
+            <p>📞 Phone: +91 98765 43210</p>
+
+            <p>🕐 Office Hours: Monday - Friday, 9 AM - 5 PM</p>
+
+        </div>
+
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+
+            <h2>Send Us a Message</h2>
+
+            <form id="contactForm">
+
+                <label for="name">Full Name</label>
+
+                <input type="text"
+                       id="name"
+                       placeholder="Enter your name"
+                       required>
+
+
+                <label for="email">Email</label>
+
+                <input type="email"
+                       id="email"
+                       placeholder="Enter your email"
+                       required>
+
+
+                <label for="subject">Subject</label>
+
+                <input type="text"
+                       id="subject"
+                       placeholder="Enter subject"
+                       required>
+
+
+                <label for="message">Message</label>
+
+                <textarea id="message"
+                          placeholder="Write your message..."
+                          required></textarea>
+
+
+                <button type="submit">
+                    Submit
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- JavaScript -->
+
+    <script>
+
+        document.getElementById("contactForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            let name = document.getElementById("name").value;
+
+            let email = document.getElementById("email").value;
+
+            let subject = document.getElementById("subject").value;
+
+            let message = document.getElementById("message").value;
+
+
+            let contactData = {
+
+                name: name,
+
+                email: email,
+
+                subject: subject,
+
+                message: message
+
+            };
+
+
+            localStorage.setItem(
+                "contactMessage",
+                JSON.stringify(contactData)
+            );
+
+
+            alert(
+                "Thank you " + name +
+                "!\n\nYour message has been submitted successfully."
+            );
+
+
+            document.getElementById("contactForm").reset();
+
+        });
+
+    </script>
+
+</body>
+
+</html>
